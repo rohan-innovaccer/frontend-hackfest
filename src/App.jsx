@@ -19,10 +19,27 @@ import Sidebar from './components/Sidebar';
 import './styles.css';
 
 const App = () => {
+<<<<<<< HEAD
   const getToken = () => JSON.parse(localStorage.getItem('token'));
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   const URL = 'https://backend-django-innovaccer.herokuapp.com/patientInfo';
+=======
+  const user = false;
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [detailsList, setDetailsList] = useState([]);
+  const URL = 'https://backend-django-innovaccer.herokuapp.com/medicalsummary';
+
+  const handleUser = () => {
+    localStorage.setItem('username', username);
+    localStorage.setItem('password', password);
+  };
+  const removeUser = () => {
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+  };
+>>>>>>> 02e9f82b (fix: conflict issue)
 
   // console.log(getToken());
   // useEffect(() => {
