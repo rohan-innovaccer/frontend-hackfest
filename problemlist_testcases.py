@@ -10,7 +10,7 @@ class ProblemList(unittest.TestCase):
     def test_empty_problemlist_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000')
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         ele.click()
         time.sleep(2)
@@ -22,7 +22,7 @@ class ProblemList(unittest.TestCase):
         time.sleep(2)
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         ele.click()
-        time.sleep(10)
+        time.sleep(3)
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[1]/div/div/div[1]/div/div[5]/div/i')
         ele.click()
         time.sleep(2)
@@ -45,7 +45,7 @@ class ProblemList(unittest.TestCase):
     def test_empty_date_of_site_problemlist_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000')
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         ele.click()
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -54,7 +54,7 @@ class ProblemList(unittest.TestCase):
         ele.send_keys('Hello@123')
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         ele.click()
-        time.sleep(10)
+        time.sleep(3)
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[1]/div/div/div[1]/div/div[5]/div/i')
         ele.click()
         time.sleep(2)
@@ -92,7 +92,7 @@ class ProblemList(unittest.TestCase):
     def test_empty_bodyofsite_problemlist_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000')
         self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a').click()
         time.sleep(2)
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input').send_keys('Himanch')
@@ -100,7 +100,7 @@ class ProblemList(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[4]/input').send_keys('Hello@123')
         time.sleep(2)
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button').click()
-        time.sleep(10)
+        time.sleep(3)
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[1]/div/div/div[1]/div/div[5]/div/i').click()
         time.sleep(2)
         valid_message = 'Submitted Successfully'
@@ -130,12 +130,12 @@ class ProblemList(unittest.TestCase):
     def test_empty_diagnosis_name_problemlist_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000')
         self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a').click()
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input').send_keys('Himanch')
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[4]/input').send_keys('Hello@123')
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button').click()
-        time.sleep(10)
+        time.sleep(3)
         self.driver.find_element(By.XPATH, '//html/body/div/div/div/div[1]/div/div/div[1]/div/div[5]/div/i').click()
         time.sleep(2)
         valid_message = 'Submitted Successfully'
@@ -157,12 +157,12 @@ class ProblemList(unittest.TestCase):
     def test_valid_problemlist_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000')
         self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a').click()
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input').send_keys('Himanch')
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[4]/input').send_keys('Hello@123')
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button').click()
-        time.sleep(10)
+        time.sleep(3)
         self.driver.find_element(By.XPATH, '//html/body/div/div/div/div[1]/div/div/div[1]/div/div[5]/div/i').click()
         time.sleep(2)
         valid_message = 'Submitted Successfully'
@@ -203,8 +203,8 @@ class ProblemList(unittest.TestCase):
         
     
     
-# if __name__ == "__main__":
-#     unittest.main()
 if __name__ == "__main__":
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner)
+    unittest.main()
+# if __name__ == "__main__":
+#     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner)
         

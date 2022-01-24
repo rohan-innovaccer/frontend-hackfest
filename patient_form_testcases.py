@@ -9,7 +9,7 @@ class PatientForm(unittest.TestCase):
     def test_empty_age_patient_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000/')
         self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a').click()
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input').send_keys('Himanch')
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[4]/input').send_keys('Hello@123')
@@ -39,7 +39,7 @@ class PatientForm(unittest.TestCase):
     def test_empty_name_patient_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000/')
         self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a').click()
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input').send_keys('Himanch')
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[4]/input').send_keys('Hello@123')
@@ -65,7 +65,7 @@ class PatientForm(unittest.TestCase):
     def test_valid_patient_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000/')
         self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a').click()
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input').send_keys('Himanch')
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[4]/input').send_keys('Hello@123')
@@ -95,7 +95,7 @@ class PatientForm(unittest.TestCase):
     def test_empty_details_patient_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000/')
         self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a').click()
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input').send_keys('Himanch')
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[4]/input').send_keys('Hello@123')

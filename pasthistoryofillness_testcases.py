@@ -10,7 +10,7 @@ class PastHistoryOfIllness(unittest.TestCase):
     def test_empty_pasthistoryofillness_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000/')
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         ele.click()
         time.sleep(2)
@@ -52,7 +52,7 @@ class PastHistoryOfIllness(unittest.TestCase):
     def test_empty_date_of_site_pasthistoryofillness_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000/')
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         ele.click()
         time.sleep(2)
@@ -95,7 +95,7 @@ class PastHistoryOfIllness(unittest.TestCase):
     def test_empty_bodyofsite_pasthistoryofillness_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000/')
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         ele.click()
         time.sleep(2)
@@ -140,7 +140,7 @@ class PastHistoryOfIllness(unittest.TestCase):
     def test_empty_diagnosis_name_pasthistoryofillness_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000/')
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         ele.click()
         time.sleep(2)
@@ -186,7 +186,7 @@ class PastHistoryOfIllness(unittest.TestCase):
     def test_valid_pasthistoryofillness_form(self):
         self.driver = webdriver.Chrome()
         self.driver.maximize_window()
-        self.driver.get('http://localhost:3000/')
+        self.driver.get('http://18.222.121.121:3000/')
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         ele.click()
         time.sleep(2)

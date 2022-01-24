@@ -12,9 +12,9 @@ class LoginTest(unittest.TestCase):
         cls.driver.maximize_window()
         
     def test_valid_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -27,9 +27,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(home, self.driver.current_url)
         
     def test_empty_values_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -42,9 +42,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(login, self.driver.current_url)
         
     def test_empty_password_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -57,9 +57,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(login, self.driver.current_url)
         
     def test_empty_username_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -72,9 +72,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(login, self.driver.current_url)
     
     def test_invalid_password_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -87,9 +87,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(login, self.driver.current_url)
     
     def test_invalid_username_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -102,9 +102,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(login, self.driver.current_url)
         
     def test_numeric_username_password_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -117,9 +117,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(login, self.driver.current_url)
         
     def test_numeric_username_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -132,9 +132,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(login, self.driver.current_url)
         
     def test_numeric_password_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -147,9 +147,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(login, self.driver.current_url)
         
     def test_symbole_username_password_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -162,9 +162,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(login, self.driver.current_url)
     
     def test_symbole_username_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
@@ -177,9 +177,9 @@ class LoginTest(unittest.TestCase):
         self.assertEqual(login, self.driver.current_url)
         
     def test_symbole_password_login(self):
-        home = 'https://inrecord.netlify.app/'
-        login = 'https://inrecord.netlify.app/login'
-        self.driver.get('https://inrecord.netlify.app/')
+        home = 'http://18.222.121.121:3000/'
+        login = 'http://18.222.121.121:3000/login'
+        self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/div[2]/input')
