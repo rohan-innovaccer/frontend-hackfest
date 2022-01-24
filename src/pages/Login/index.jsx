@@ -33,11 +33,22 @@ const Login = ({ setToken, setUser, getToken }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
+<<<<<<< HEAD
     fetch('http://groupd-load-balancer-680499434.us-east-1.elb.amazonaws.com/api-token-auth/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...data }),
     })
+=======
+    fetch(
+      'http://groupd-load-balancer-680499434.us-east-1.elb.amazonaws.com/api-token-auth/',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...data }),
+      }
+    )
+>>>>>>> 0037a3c49383f9a7f2c89dc28828c96da092f4f7
       .then((res) => res.json())
       .then((token) => {
         if (!token.non_field_errors) {
