@@ -5,6 +5,9 @@ import HtmlTestRunner
 import time
 from selenium.webdriver.common.keys import Keys
 
+VALID_MESSAGE = 'Submitted Successfully'
+INVALID_MESSAGE = 'invalid details'
+
 class PastHistoryOfIllness(unittest.TestCase):
     
     def test_empty_pasthistoryofillness_form(self):
@@ -27,8 +30,6 @@ class PastHistoryOfIllness(unittest.TestCase):
         ele.click()
         time.sleep(2)
         
-        valid_message = 'Submitted Successfully'
-        invalid_message = 'invalid details'
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[1]/div[1]/div[2]/input')
         ele.clear()
         ele.send_keys('')
@@ -46,7 +47,7 @@ class PastHistoryOfIllness(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div[2]/div/form/button').click()
         value = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[4]/div/div/div/div/span').text
         time.sleep(5)
-        self.assertIn(invalid_message, value)
+        self.assertIn(INVALID_MESSAGE, value)
         self.driver.close()
     
     def test_empty_date_of_site_pasthistoryofillness_form(self):
@@ -88,7 +89,7 @@ class PastHistoryOfIllness(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div[2]/div/form/button').click()
         value = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[4]/div/div/div/div/span').text
         time.sleep(5)
-        self.assertIn(invalid_message, value)
+        self.assertIn(INVALID_MESSAGE, value)
         self.driver.close()
     
     
@@ -134,7 +135,7 @@ class PastHistoryOfIllness(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div[2]/div/form/button').click()
         value = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[4]/div/div/div/div/span').text
         time.sleep(5)
-        self.assertIn(invalid_message, value)
+        self.assertIn(INVALID_MESSAGE, value)
         self.driver.close()
       
     def test_empty_diagnosis_name_pasthistoryofillness_form(self):
@@ -180,7 +181,7 @@ class PastHistoryOfIllness(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div[2]/div/form/button').click()
         value = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[4]/div/div/div/div/span').text
         time.sleep(5)
-        self.assertIn(invalid_message, value)
+        self.assertIn(INVALID_MESSAGE, value)
         self.driver.close()
         
     def test_valid_pasthistoryofillness_form(self):
@@ -256,7 +257,7 @@ class PastHistoryOfIllness(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[2]/div/div[2]/div/form/button').click()
         value = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[4]/div/div/div/div/span').text
         time.sleep(5)
-        self.assertIn(valid_message, value)
+        self.assertIn(VALID_MESSAGE, value)
         self.driver.close()
     
     

@@ -4,6 +4,10 @@ import unittest
 import HtmlTestRunner
 import time
 
+
+HOME_URL = 'http://18.222.121.121:3000/'
+LOGIN_URL = 'http://18.222.121.121:3000/login'
+
 class LoginTest(unittest.TestCase):
     
     @classmethod
@@ -12,8 +16,6 @@ class LoginTest(unittest.TestCase):
         cls.driver.maximize_window()
         
     def test_valid_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -23,12 +25,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('Hello@123')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(home, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(HOME_URL, self.driver.current_url)
         
     def test_empty_values_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -38,12 +38,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
         
     def test_empty_password_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -53,12 +51,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
         
     def test_empty_username_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -68,12 +64,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('Hello@123')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
     
     def test_invalid_password_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -83,12 +77,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('Hello@1234')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
     
     def test_invalid_username_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -98,12 +90,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('Hello@123')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
         
     def test_numeric_username_password_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -113,12 +103,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('97734455')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
         
     def test_numeric_username_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -128,12 +116,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('Hello@123')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
         
     def test_numeric_password_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -143,12 +129,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('97734455')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
         
     def test_symbole_username_password_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -158,12 +142,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('@#$%^&*')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
     
     def test_symbole_username_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -173,12 +155,10 @@ class LoginTest(unittest.TestCase):
         element.send_keys('Hello@123')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
         
     def test_symbole_password_login(self):
-        home = 'http://18.222.121.121:3000/'
-        login = 'http://18.222.121.121:3000/login'
         self.driver.get('http://18.222.121.121:3000/')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/nav/ul/li/a')
         element.click()
@@ -188,8 +168,8 @@ class LoginTest(unittest.TestCase):
         element.send_keys('&*%$#@!!')
         element = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div/div/div/div/form/button')
         element.click()
-        time.sleep(10)
-        self.assertEqual(login, self.driver.current_url)
+        time.sleep(5)
+        self.assertEqual(LOGIN_URL, self.driver.current_url)
     
     @classmethod
     def tearDownClass(cls):

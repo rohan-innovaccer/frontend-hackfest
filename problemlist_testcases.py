@@ -5,6 +5,11 @@ import HtmlTestRunner
 import time
 from selenium.webdriver.common.keys import Keys
 
+from pasthistoryofillness_testcases import INVALID_MESSAGE , VALID_MESSAGE
+
+VALID_MESSAGE = 'Submitted Successfully'
+INVALID_MESSAGE  = 'invalid details'
+
 class ProblemList(unittest.TestCase):
     
     def test_empty_problemlist_form(self):
@@ -26,8 +31,7 @@ class ProblemList(unittest.TestCase):
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[1]/div/div/div[1]/div/div[5]/div/i')
         ele.click()
         time.sleep(2)
-        valid_message = 'Submitted Successfully'
-        invalid_message = 'invalid details'
+     
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[1]/div[1]/div[2]/input')
         ele.clear()
         ele.send_keys('')
@@ -39,7 +43,7 @@ class ProblemList(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/button').click()
         value = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[2]/div/div/div/div/span').text
         time.sleep(5)
-        self.assertIn(invalid_message, value)
+        self.assertIn(INVALID_MESSAGE , value)
         self.driver.close()
     
     def test_empty_date_of_site_problemlist_form(self):
@@ -58,8 +62,7 @@ class ProblemList(unittest.TestCase):
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[1]/div/div/div[1]/div/div[5]/div/i')
         ele.click()
         time.sleep(2)
-        valid_message = 'Submitted Successfully'
-        invalid_message = 'invalid details'
+    
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[1]/div[1]/div[2]/input')
         ele.clear()
         ele.send_keys('Cerebral Palsy')
@@ -86,7 +89,7 @@ class ProblemList(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/button').click()
         value = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[2]/div/div/div/div/span').text
         time.sleep(5)
-        self.assertIn(invalid_message, value)
+        self.assertIn(INVALID_MESSAGE , value)
         self.driver.close()
     
     def test_empty_bodyofsite_problemlist_form(self):
@@ -103,8 +106,7 @@ class ProblemList(unittest.TestCase):
         time.sleep(3)
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[1]/div/div/div[1]/div/div[5]/div/i').click()
         time.sleep(2)
-        valid_message = 'Submitted Successfully'
-        invalid_message = 'invalid details'
+      
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[1]/div[1]/div[2]/input')
         ele.clear()
         ele.send_keys('Cerebral Palsy')
@@ -124,7 +126,7 @@ class ProblemList(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/button').click()
         value = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[2]/div/div/div/div/span').text
         time.sleep(5)
-        self.assertIn(invalid_message, value)
+        self.assertIn(INVALID_MESSAGE , value)
         self.driver.close()
       
     def test_empty_diagnosis_name_problemlist_form(self):
@@ -138,8 +140,7 @@ class ProblemList(unittest.TestCase):
         time.sleep(3)
         self.driver.find_element(By.XPATH, '//html/body/div/div/div/div[1]/div/div/div[1]/div/div[5]/div/i').click()
         time.sleep(2)
-        valid_message = 'Submitted Successfully'
-        invalid_message = 'invalid details'
+
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[1]/div[1]/div[2]/input')
         ele.clear()
         ele.send_keys('')
@@ -151,7 +152,7 @@ class ProblemList(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/button').click()
         value = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[2]/div/div/div/div/span').text
         time.sleep(5)
-        self.assertIn(invalid_message, value)
+        self.assertIn(INVALID_MESSAGE , value)
         self.driver.close()
         
     def test_valid_problemlist_form(self):
@@ -165,8 +166,7 @@ class ProblemList(unittest.TestCase):
         time.sleep(3)
         self.driver.find_element(By.XPATH, '//html/body/div/div/div/div[1]/div/div/div[1]/div/div[5]/div/i').click()
         time.sleep(2)
-        valid_message = 'Submitted Successfully'
-        invalid_message = 'invalid details'
+       
         ele = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[1]/div[1]/div[2]/input')
         ele.clear()
         ele.send_keys('Cerebral Palsy')
@@ -198,7 +198,7 @@ class ProblemList(unittest.TestCase):
         self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/button').click()
         value = self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div/div[2]/div/form/div[2]/div/div/div/div/span').text
         time.sleep(5)
-        self.assertIn(valid_message, value)
+        self.assertIn(VALID_MESSAGE, value)
         self.driver.close()
         
     
